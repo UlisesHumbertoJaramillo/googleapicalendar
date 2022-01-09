@@ -52,6 +52,8 @@ module.exports = lista = {
   },
   getEvent: function (req, res) {
     var payload = req.body;
+    var id = req.params.id;
+    res.send({"response":"hola mundo"+id});
   },
   updateEvent: function (req, res) {
     var id = req.params.id;
