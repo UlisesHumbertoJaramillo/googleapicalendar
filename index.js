@@ -12,9 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); //para que express puede entender los objetos json
 app.use(express.static("."));
 app.use(cors()); //Para que todas las rutas sean accesibles por otra app dentro de la maquina
-////////////////SETTINGS////////////////
-//app.set("view engine", "ejs");
-//app.set("views", ruta.join(__dirname, "/views"));
 
 //////////////ROUTER/////////////////
 /*

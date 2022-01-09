@@ -8,16 +8,16 @@ const funciones = require("./funciones");
 
 
 //CREAR UN EVENTO
-router.post("/crearevento", funciones.createEmpleado);
+router.post("/crearevento", funciones.createEvent);
 
 //OBTENER UN EVENTO
-router.get("/evento/:id", funciones.getEmpleadoPorId);
+router.get("/evento/:id", funciones.getEvent);
 
 //ACTUALIZAR UN EVENTO
-router.put("/evento/:id", funciones.updateEmpleadoPorId);
+router.put("/evento/:id", funciones.updateEvent);
 
 //BORRAR UN EVENTO
-router.delete("/evento/:id", funciones.deleteEmpleadoPorId);
+router.delete("/evento/:id", funciones.deleteEvent);
 
 /*
 //MIDDLEWARE PARA VERIFICACION
