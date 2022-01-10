@@ -39,12 +39,12 @@ module.exports = lista = {
     var response;
     const event={description: payload.description,
       start:{
-        dateTime: payload.eventStartTime,
+        dateTime: '2022-01-10T00:27:00-07:00',
       },
       end:{
-        dateTime: payload.eventEndTime,
+        dateTime: '2022-02-10T00:27:00-07:00',
       }};
-    response = calendar.events.insert({calendarId:'',resource:event}, err => {
+    response = calendar.events.insert({calendarId:'e1i640idohcv1deottcrb3i6a4@group.calendar.google.com',resource:event}, err => {
       if(err) return console.error('calendar event error');
       return console.log('calendar created');
     })
