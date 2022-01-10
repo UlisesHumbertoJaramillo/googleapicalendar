@@ -47,7 +47,7 @@ module.exports = lista = {
         dateTime: '2022-01-10T00:27:00-07:00'
       },
       end:{
-        dateTime: '2022-02-10T00:27:00-07:00',
+        dateTime: '2022-01-12T00:27:00-07:00',
       }};
     response = calendar.events.insert({calendarId:'e1i640idohcv1deottcrb3i6a4@group.calendar.google.com',resource:event}, err => {
       if(err) return console.error('calendar event error');
