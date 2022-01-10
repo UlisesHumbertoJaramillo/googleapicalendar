@@ -43,7 +43,7 @@ module.exports = lista = {
     var payload = req.body;
     var response;
     const event={
-      sumary: "meet with somebody",
+      summary: "meet with somebody",
       description: 'It´s only a meeting',
       start:{
         
