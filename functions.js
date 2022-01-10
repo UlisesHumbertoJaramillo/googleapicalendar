@@ -43,7 +43,10 @@ module.exports = lista = {
     var payload = req.body;
     var response;
     const event={
+      sumary: "meet with somebody",
+      description: 'It´s only a meeting',
       start:{
+        
         dateTime: '2022-01-10T00:27:00-07:00'
       },
       end:{
@@ -52,7 +55,7 @@ module.exports = lista = {
     response = calendar.events.insert({calendarId:'e1i640idohcv1deottcrb3i6a4@group.calendar.google.com',resource:event}, err => {
       if(err) return console.error('calendar event error');
       return console.log('calendar created');
-    })
+    });
     res.send(response);
   },
   getEvent: function (req, res) {
