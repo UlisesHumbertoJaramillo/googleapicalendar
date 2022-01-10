@@ -29,7 +29,12 @@ const event = {payload
     timeZone:'america/Denver'
   }
 }
-
+{
+      "resource": {
+        "end": {dateTime: '2022-02-10T20:27:00-07:00'},
+        "start": {dateTime: '2022-01-10T18:27:00-07:00'}
+      }
+    }
 
 */
 
@@ -39,7 +44,7 @@ module.exports = lista = {
     var response;
     const event={
       start:{
-        dateTime: '2022-01-10T00:27:00-07:00',
+        dateTime: '2022-01-10T00:27:00-07:00'
       },
       end:{
         dateTime: '2022-02-10T00:27:00-07:00',
@@ -48,7 +53,7 @@ module.exports = lista = {
       if(err) return console.error('calendar event error');
       return console.log('calendar created');
     })
-    res.send(response);
+    res.send("response");
   },
   getEvent: function (req, res) {
     var payload = req.body;
