@@ -51,10 +51,10 @@ module.exports = lista = {
       end:{
         dateTime: '2022-01-12T00:27:00-07:00',
       }};
-    calendar.events.insert({calendarId:'e1i640idohcv1deottcrb3i6a4@group.calendar.google.com',resource:event}, err => {
+    calendar.events.insert({calendarId:'e1i640idohcv1deottcrb3i6a4@group.calendar.google.com',resource:event}, (err,response) => {
       if(err) return console.error('calendar event error');
-      return console.log('calendar created');
-    }).then(res.send(response.data));
+      res.send(response.data);
+    });
     
   },
   getEvent: function (req, res) {
