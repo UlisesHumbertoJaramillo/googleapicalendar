@@ -37,7 +37,7 @@ module.exports = lista = {
   createEvent: function (req, res) {
     var payload = req.body;
     var response;
-    const event={description: payload.description,
+    const event={
       start:{
         dateTime: '2022-01-10T00:27:00-07:00',
       },
