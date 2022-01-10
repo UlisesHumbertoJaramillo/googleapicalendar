@@ -4,7 +4,7 @@ const ruta = require("path");
 const jwt = require("jsonwebtoken");
 
 //lista de funciones que se van a usar en las rutas
-const funciones = require("./funciones");
+const funciones = require("./functions");
 
 
 //CREAR UN EVENTO
@@ -42,3 +42,5 @@ function verifyToken(req, res, next) {
   next();
 }
 */
+
+module.exports = router;
