@@ -53,7 +53,7 @@ module.exports = lista = {
       if(err) return console.error('calendar event error');
       return console.log('calendar created');
     })
-    res.send("response");
+    res.send(response);
   },
   getEvent: function (req, res) {
     var payload = req.body;
