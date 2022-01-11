@@ -36,20 +36,57 @@ const event = {payload
       }
     }
 
+
+    ///////////RESPONSE JSON/////////////
+
+    {
+    "kind": "calendar#event",
+    "etag": "\"3283705800134000\"",
+    "id": "2f78cl6ds10eh1bb24g21k3pns",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MmY3OGNsNmRzMTBlaDFiYjI0ZzIxazNwbnMgZTFpNjQwaWRvaGN2MWRlb3R0Y3JiM2k2YTRAZw",
+    "created": "2022-01-10T22:15:00.000Z",
+    "updated": "2022-01-10T22:15:00.067Z",
+    "summary": "meet with somebody",
+    "description": "It´s only a meeting",
+    "creator": {
+        "email": "united.8686@gmail.com"
+    },
+    "organizer": {
+        "email": "e1i640idohcv1deottcrb3i6a4@group.calendar.google.com",
+        "displayName": "calendario de prueba para zoho",
+        "self": true
+    },
+    "start": {
+        "dateTime": "2022-01-10T04:27:00-03:00",
+        "timeZone": "America/Argentina/Buenos_Aires"
+    },
+    "end": {
+        "dateTime": "2022-01-12T04:27:00-03:00",
+        "timeZone": "America/Argentina/Buenos_Aires"
+    },
+    "iCalUID": "2f78cl6ds10eh1bb24g21k3pns@google.com",
+    "sequence": 0,
+    "reminders": {
+        "useDefault": true
+    },
+    "eventType": "default"
+}
+
 */
 
 module.exports = lista = {
   createEvent: async function (req, res) {
     var payload = req.body;
     const event={
-      summary: "meet with somebody",
-      description: 'It´s only a meeting',
+      summary: payload.summary,
+      description: payload.description,
       start:{
         
-        dateTime: '2022-01-10T00:27:00-07:00'
+        dateTime: payload.start
       },
       end:{
-        dateTime: '2022-01-12T00:27:00-07:00',
+        dateTime: payload.end,
       }};
     calendar.events.insert({calendarId:'e1i640idohcv1deottcrb3i6a4@group.calendar.google.com',resource:event}, (err,response) => {
       if(err) return console.error('calendar event error');
